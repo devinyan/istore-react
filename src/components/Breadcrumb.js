@@ -5,11 +5,10 @@ import axios from 'axios';
 // https://github.com/icd2k3/react-router-breadcrumbs-hoc
 
 // breadcrumbs can be any type of component or string
-// const UserBreadcrumb = ({ match }) => (
-// <span>{getProductName(match.params.pid)}</span>
-// )
-const UserBreadcrumb = () => ( <span>Testing</span> )
-// define some custom breadcrumbs for certain routes (optional)
+const UserBreadcrumb = ({ match }) => (
+<span>{getProductName(match.params.pid)}</span>
+)
+
 const routes = [
   { path: '/product/detail/:pid', breadcrumb: UserBreadcrumb },
   { path: '/', breadcrumb: 'HomePage' },
