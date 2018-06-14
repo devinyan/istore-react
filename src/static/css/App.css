@@ -19502,3 +19502,6 @@ ul.nav__links::after {
 #hover_box.active {
   display: block;
 }
+#breadcrumb{
+  margin-bottom: 20px;
+}

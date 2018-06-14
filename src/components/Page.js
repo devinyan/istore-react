@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import LoginForm from './LoginForm';
-import Content from './Content'
-import Header from './Header';
+import Content from './Content';
 import Breadcrumb from './Breadcrumb';
 import Detail from './Detail';
 import {Carts} from './Detail';
