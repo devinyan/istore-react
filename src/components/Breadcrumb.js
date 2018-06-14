@@ -4,7 +4,6 @@ import withBreadcrumbs from 'react-router-breadcrumbs-hoc';
 import ProductTitleBreadcrumb from './ProductTitleBreadcrumb';
 // https://github.com/icd2k3/react-router-breadcrumbs-hoc
 
-
 const routes = [
   { path: '/product/detail/:pid', breadcrumb: ProductTitleBreadcrumb },
   { path: '/', breadcrumb: 'HomePage' },
