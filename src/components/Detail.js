@@ -3,6 +3,7 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import CartItem from './CartItem';
 import lyncicon from '../static/img/Lync-icon.png';
+import ReactDom from 'react-dom';
 var EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 export default class Detail extends Component {
@@ -26,18 +27,17 @@ export default class Detail extends Component {
   componentWillMount() {
     this.getProductByID();
   }
-
+  componentDidMount(){
+      var content = document.getElementsByClassName('is-content')[0].style.display='none';    
+  }
   getProductByID() {
     let pid = this.props.match.params.pid;
     let callURL = 'https://easy-mock.com/mock/5b14997f27efb177b0e1052f/products/detail/' + pid;
-    console.log(callURL);
-
     axios.get(callURL)
       .then(res => {
         this.setState({
           product: res.data.product
         });
-        console.log(res.data.product);
       });
   }
 
@@ -208,7 +208,6 @@ export class Cart extends Component {
         products : products
       });
     }
-    console.info('Get cats from cookie:', products);
   }
 
   render(){

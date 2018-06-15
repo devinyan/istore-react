@@ -24,7 +24,7 @@ export default class Content extends Component {
       getProductsByCategory() {
         let self = this;
         let isContainMatch = this.props.match ?  true : false;
-        let category = isContainMatch ? this.props.match.params.category  : 'all';
+        let category = isContainMatch ? (this.props.match.params.category ? this.props.match.params.category : 'all') : 'all';
         let callURL = 'https://easy-mock.com/mock/5b14997f27efb177b0e1052f/products/' + category;
         axios.get(callURL)
           .then(res => {
@@ -64,7 +64,7 @@ export default class Content extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-md-12">
                         <div id="is-plp-title">
                             <div className="bottom clearfix">
@@ -72,12 +72,10 @@ export default class Content extends Component {
                                     <div className="right">
                                     </div>
                                 </div>
-    
                             </div>
-    
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>

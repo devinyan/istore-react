@@ -4,8 +4,8 @@ export default class HomePage extends Component {
     render() {
         return ( 
           <div className="homepage">
-                <Content />
-        </div>
+                <h1 style={{textAlign:'center'}}>Hello honor, welcome to istore</h1>
+          </div>
         )
       }
 
