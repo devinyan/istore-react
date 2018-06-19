@@ -3,7 +3,6 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import CartItem from './CartItem';
 import lyncicon from '../static/img/Lync-icon.png';
-import ReactDom from 'react-dom';
 var EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 export default class Detail extends Component {
@@ -28,7 +27,7 @@ export default class Detail extends Component {
     this.getProductByID();
   }
   componentDidMount(){
-      var content = document.getElementsByClassName('is-content')[0].style.display='none';    
+    document.getElementsByClassName('is-content')[0].style.display='none';    
   }
   getProductByID() {
     let pid = this.props.match.params.pid;
