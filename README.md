@@ -7,4 +7,4 @@
 
 * install node.js
 * clone this project and cd to this dir.
-* using npm start to start the project.
+* using `npm start` to start the project.
