@@ -8,6 +8,8 @@ https://ke.qq.com/course/295318
 https://easy-mock.com/login
 ## 本地Mock
 http://mockjs.com/
+## 在线验证JSON数据格式
+http://jsonviewer.stack.hu/
 ## ES6视频教程
 http://v.youku.com/v_show/id_XMjQ5ODUyMTUwOA==.html
 ## ES6文章教程
@@ -32,3 +34,5 @@ http://freepdf-books.com/
 https://www.regextester.com/
 ## SpringMVC视频教程
 http://www.jikexueyuan.com/course/springmvc/
+## Git常用命令
+http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
