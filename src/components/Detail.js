@@ -219,7 +219,7 @@ export class Cart extends Component {
 							<span>发布商品</span>
 						</a>
 					</div>
-					<div className="yCmsComponent miniCart">
+					<div className="miniCart">
              <a href="/carts" className="minicart">
 	              <span className="istore-icon-shopping-cart"><i className="fas fa-cart-plus"></i></span>
                 <span className="minicart-count">{this.state.products.length}</span>
