@@ -1,9 +1,9 @@
 # istore-react
-## Introduction  ##
+## Introduction
 
 * This is a simple demo for e-commerce front-end page by react.
 
-## How to start  ##
+## How to start
 
 * install node.js
 * clone this project and cd to this dir.
