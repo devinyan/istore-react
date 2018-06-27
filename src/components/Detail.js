@@ -3,6 +3,7 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import CartItem from './CartItem';
 import lyncicon from '../static/img/Lync-icon.png';
+import $ from 'jquery';
 var EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 export default class Detail extends Component {
@@ -11,10 +12,12 @@ export default class Detail extends Component {
   constructor() {
     super();
     this.state = {
-      product: {},
+      product: {
+      },
       style: {
         display: 'none'
-      }
+      },
+      lyncUrl: ''
     }
   }
 
@@ -27,7 +30,7 @@ export default class Detail extends Component {
     this.getProductByID();
   }
   componentDidMount(){
-    document.getElementsByClassName('is-content')[0].style.display='none';    
+    document.getElementsByClassName('is-content')[0].style.display='none'; 
   }
   getProductByID() {
     let pid = this.props.match.params.pid;
@@ -35,7 +38,8 @@ export default class Detail extends Component {
     axios.get(callURL)
       .then(res => {
         this.setState({
-          product: res.data.product
+          product: res.data.product,
+          lyncUrl: "IM:<sip:"+res.data.product.owner+"@beijing.objectiva.local>"
         });
       });
   }
@@ -70,7 +74,8 @@ export default class Detail extends Component {
           </div> 
           <div className="istore-pdp-details"> 
             <div className="pdp-seller"> 
-            <span className="seller-name owner-lync">卖家<span className="owner-lync"> <a href="IM:&lt;sip:larryli@beijing.objectiva.local&gt;" alt="点击联系卖家" title="点击联系卖家"> <img src={lyncicon} className="lync-img" alt="" /> {this.state.product.owner}</a> </span></span> 
+            <span className="seller-name owner-lync">卖家<span className="owner-lync"> 
+            <a id="lyncToContact" alt="" title="" href={this.state.lyncUrl}> <img src={lyncicon} className="lync-img" alt="" /> {this.state.product.owner}</a> </span></span> 
             </div> 
             <div className="pdp-details-title"> 
             <h3 className="details-title">{this.state.product.title}</h3> 
