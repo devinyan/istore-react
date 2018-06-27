@@ -3,7 +3,6 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import CartItem from './CartItem';
 import lyncicon from '../static/img/Lync-icon.png';
-import $ from 'jquery';
 var EventEmitter = require('events').EventEmitter;
 let emitter = new EventEmitter();
 export default class Detail extends Component {
@@ -106,8 +105,8 @@ export default class Detail extends Component {
             <div className="deliverycost">
               运费：包邮
             </div> 
-            <div className="yCmsContentSlot add-to-cart"> 
-            <div className="yCmsComponent pdp-details-addcart clearfix"> 
+            <div className="add-to-cart"> 
+            <div className="pdp-details-addcart clearfix"> 
               <div className="pdp-well-number"> 
               <label htmlFor="qtyInput" className="hidden"> 数量</label> 
               <div className="qty-group"> 
@@ -171,7 +170,7 @@ export default class Detail extends Component {
             <div className="row pdp-bottom"> 
               <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
               <div className="prodReview clearfix"> 
-                <a href="" id="write_review_action_main" className="write">review.write.title</a> 
+                <a href="" id="write_review_action_main" className="write">12</a> 
               </div>
               </div> 
               <div className="summary"> 
